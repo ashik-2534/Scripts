@@ -27,7 +27,7 @@ video_info = []
 
 if os.path.isdir(directory):
     for file in os.listdir(directory):
-        if file.endswith(".mp4"):
+        if file.endswith(('.mp4', '.mkv')):
             file_path = os.path.join(directory, file)
             duration = get_video_duration(file_path)
             video_info.append((file, duration))
